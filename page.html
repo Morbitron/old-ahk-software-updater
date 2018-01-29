@@ -1,0 +1,826 @@
+
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Save Web Page - AutoHotkey Community</title>
+<link rel="alternate" type="application/atom+xml" title="Feed - AutoHotkey Community" href="https://autohotkey.com:443/boards/feed.php" /> <link rel="alternate" type="application/atom+xml" title="Feed - News" href="https://autohotkey.com:443/boards/feed.php?mode=news" /> <link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="https://autohotkey.com:443/boards/feed.php?mode=forums" /> <link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="https://autohotkey.com:443/boards/feed.php?mode=topics" /> <link rel="alternate" type="application/atom+xml" title="Feed - Active Topics" href="https://autohotkey.com:443/boards/feed.php?mode=topics_active" /> <link rel="alternate" type="application/atom+xml" title="Feed - Forum - Ask For Help" href="https://autohotkey.com:443/boards/feed.php?f=5" /> <link rel="alternate" type="application/atom+xml" title="Feed - Topic - Save Web Page" href="https://autohotkey.com:443/boards/feed.php?f=5&amp;t=3787" />
+<link rel="canonical" href="https://autohotkey.com:443/boards/viewtopic.php?t=3787" />
+<link href="./styles/simplicity/theme/print.css?assets_version=100" rel="stylesheet" type="text/css" media="print" title="printonly" />
+<link href="./styles/simplicity/theme/fonts/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="./styles/simplicity/theme/fonts/glyphicons-pro-1.9/css/glyphicons.css" rel="stylesheet" type="text/css" />
+<link href="./styles/simplicity/theme/stylesheet.css?assets_version=100" rel="stylesheet" type="text/css" media="screen, projection" />
+<!--[if lte IE 9]>
+	<link href="./styles/simplicity/theme/tweaks.css?assets_version=100" rel="stylesheet" type="text/css" media="screen, projection" />
+<![endif]-->
+<style type="text/css">
+
+/* <![CDATA[ */
+
+	.codebox_plus code
+
+	{
+
+		color: black;
+
+		max-height: none;
+
+		-moz-tab-size: 4;
+
+		-o-tab-size: 4;
+
+		tab-size: 4;
+
+	}
+
+	.codebox_plus .collapsed
+
+	{
+
+		max-height: 187px; /* currently 11 lines */
+
+	}
+
+	.codebox_plus_about
+
+	{
+
+		float: right;
+
+		font-weight: normal;
+
+		text-transform: none;
+
+	}
+
+.kw1 { color: #480048; } /* reserved */
+
+.kw2 { color: #CF00CF; } /* built-in vars */
+
+.kw3 { color: #00509F; } /* commands */
+
+.kw4 { color: #0F707F; } /* functions */
+
+.kw5 { color: #F04020;  } /* directives */
+
+.kw6 { color: #A92014; } /* hotkeys */
+
+.kw7 { color: #004080; } /* gui commands */
+
+.kw8 { color: #004080; } /* gui controls */
+
+.coMULTI, .co1 { color: #808080; } /* comments */
+
+.es0 { color: #FF8000; } /* escape chars */
+
+.br0 { color: brown; } /* brackets */
+
+.st0, .st_h { color: #008000; } /* strings */
+
+.nu0 { color: #2F4F7F; } /* numbers */
+
+.sy0 { color: #7F200F; } /* symbols */
+
+.re0 { color: #821747; } /* %variables% */
+
+.re1 { color: #D56000; } /* hotstrings */
+
+.re2 { color: #DD0000; } /* labels */
+/* ]]> */
+
+</style>
+<script type="text/javascript">
+
+/* <![CDATA[ */
+
+	function codebox_plus_toggle(a, expand, collapse)
+
+	{
+
+		var e = a.parentNode.parentNode.getElementsByTagName('code')[0];
+
+		var text = e.textContent ? 'textContent' : 'innerText';
+
+		
+
+		if (e.className == 'collapsed')
+
+		{
+
+			e.className = '';
+
+			a[text] = collapse;
+
+		}
+
+		else
+
+		{
+
+			e.className = 'collapsed';
+
+			a[text] = expand;
+
+		}
+
+	}
+
+
+
+	function codebox_plus_select(a)
+
+	{
+
+		var e = a.parentNode.parentNode.getElementsByTagName('code')[0];
+
+
+
+		// Not IE and IE9+
+
+		if (window.getSelection)
+
+		{
+
+			var s = window.getSelection();
+
+			// Safari
+
+			if (s.setBaseAndExtent && false)
+
+			{
+
+				s.setBaseAndExtent(e, 0, e, e.innerText.length - 1);
+
+			}
+
+			// Firefox and Opera
+
+			else
+
+			{
+
+				// workaround for bug # 42885
+
+				if (window.opera && e.innerHTML.substring(e.innerHTML.length - 4) == '<BR>')
+
+				{
+
+					e.innerHTML = e.innerHTML + '&nbsp;';
+
+                    var r = e.ownerDocument.createRange();
+				}
+                else
+				    var r = document.createRange();
+
+				r.selectNodeContents(e);
+
+				s.removeAllRanges();
+
+				s.addRange(r);
+
+			}
+
+		}
+
+		// Some older browsers
+
+		else if (document.getSelection)
+
+		{
+
+			var s = document.getSelection();
+
+			var r = document.createRange();
+
+			r.selectNodeContents(e);
+
+			s.removeAllRanges();
+
+			s.addRange(r);
+
+		}
+
+		// IE
+
+		else if (document.selection)
+
+		{
+
+			var r = document.body.createTextRange();
+
+			r.moveToElementText(e);
+
+			r.select();
+
+		}
+
+	}
+
+/* ]]> */
+
+</script>
+<link href="./ext/tierra/topicsolved/styles/prosilver/theme/buttons.css?assets_version=100" rel="stylesheet" type="text/css" media="screen" />
+<link href="./ext/vse/lightbox/styles/all/template/lightbox/css/lightbox.css?assets_version=100" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr " data-online-text="Online">
+<a id="top" class="anchor" accesskey="t"></a>
+<div id="page-header" class="page-width">
+<div class="headerbar" role="banner">
+<div class="inner">
+<div id="site-description">
+<a id="logo" class="logo" href="https://autohotkey.com" title="Home"><img src="./styles/simplicity/theme/images/logo.png" data-src-hd="./styles/simplicity/theme/images/logo_hd.png" /></a>
+<p class="sitename">AutoHotkey Community</p>
+<p>Let's help each other out</p>
+<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+</div>
+</div>
+</div>
+<div class="navbar tabbed not-static" role="navigation">
+<div class="inner page-width">
+<div class="nav-tabs" data-current-page="viewtopic">
+<ul class="leftside">
+<li class="tab home" data-responsive-class="small-icon icon-home">
+<a class="nav-link" href="https://autohotkey.com" data-navbar-reference="home">Home</a>
+</li>
+<li id="quick-links" class="tab responsive-menu dropdown-container">
+<a href="#" class="nav-link dropdown-trigger">Quick links</a>
+<div class="dropdown hidden">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="separator"></li>
+<li class="small-icon icon-search-unanswered"><a href="./search.php?search_id=unanswered&amp;sid=00da3997038d7ad1851b0d40a1716515" role="menuitem">Unanswered topics</a></li>
+<li class="small-icon icon-search-active"><a href="./search.php?search_id=active_topics&amp;sid=00da3997038d7ad1851b0d40a1716515" role="menuitem">Active topics</a></li>
+<li class="separator"></li>
+<li class="small-icon icon-search"><a href="./search.php?sid=00da3997038d7ad1851b0d40a1716515" role="menuitem">Search</a></li>
+<li class="separator"></li>
+</ul>
+</div>
+</li>
+<li class="tab forums selected" data-responsive-class="small-icon icon-forums">
+<a class="nav-link" href="./index.php?sid=00da3997038d7ad1851b0d40a1716515">Forums</a>
+</li>
+<li class="tab members dropdown-container" data-select-match="member" data-responsive-class="small-icon icon-members">
+<a class="nav-link dropdown-trigger" href="./memberlist.php?sid=00da3997038d7ad1851b0d40a1716515">Members</a>
+<div class="dropdown hidden">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents" role="menu">
+<li class="small-icon icon-team"><a href="./memberlist.php?mode=team&amp;sid=00da3997038d7ad1851b0d40a1716515" role="menuitem">The team</a></li> </ul>
+</div>
+</li>
+</ul>
+<ul class="rightside">
+<li class="tab" data-responsive-class="small-icon icon-chat">
+<a class="nav-link" target="_self" href="/boards/viewtopic.php?f=5&amp;t=59"><b>IRC/Discord</b></a>
+</li>
+<li class="tab" data-responsive-class="small-icon icon-book-open">
+<a class="nav-link" target="_blank" href="/docs/commands/index.htm"><b>Commands</b></a>
+</li>
+<li class="tab" data-responsive-class="small-icon icon-circle-info">
+<a class="nav-link" target="_blank" href="/docs/Tutorial.htm"><b>Tutorial</b></a>
+</li>
+<li class="tab" data-responsive-class="small-icon icon-download">
+<a class="nav-link" target="_blank" href="/download"><b>Download</b>&nbsp;-&nbsp;1.1.27.07</a>
+</li>
+<li class="tab faq" data-select-match="faq" data-responsive-class="small-icon icon-faq">
+<a class="nav-link" href="./faq.php?sid=00da3997038d7ad1851b0d40a1716515" rel="help" title="Frequently Asked Questions" role="menuitem">FAQ</a>
+</li>
+<li class="tab login" data-skip-responsive="true" data-select-match="login"><a class="nav-link" href="./ucp.php?mode=login&amp;sid=00da3997038d7ad1851b0d40a1716515" title="Login" accesskey="x" role="menuitem">Login</a></li>
+<li class="tab register" data-skip-responsive="true" data-select-match="register"><a class="nav-link" href="./ucp.php?mode=register&amp;sid=00da3997038d7ad1851b0d40a1716515" role="menuitem">Register</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="navbar secondary with-search">
+<ul role="menubar">
+<li class="small-icon icon-search responsive-hide"><a href="./search.php?sid=00da3997038d7ad1851b0d40a1716515">Search</a></li>
+<li class="small-icon icon-login"><a href="./ucp.php?mode=login&amp;sid=00da3997038d7ad1851b0d40a1716515" title="Login">Login</a></li>
+<li class="small-icon icon-register"><a href="./ucp.php?mode=register&amp;sid=00da3997038d7ad1851b0d40a1716515">Register</a></li>
+<li class="search-box not-responsive"> <div id="search-box" class="search-box search-header" role="search">
+<form action="./search.php?sid=00da3997038d7ad1851b0d40a1716515" method="get" id="search">
+<fieldset>
+<input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…" />
+<button class="button icon-button search-icon" type="submit" title="Search">Search</button>
+<a href="./search.php?sid=00da3997038d7ad1851b0d40a1716515" class="button icon-button search-adv-icon" title="Advanced search">Advanced search</a>
+<input type="hidden" name="sid" value="00da3997038d7ad1851b0d40a1716515" />
+</fieldset>
+</form>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="wrap" class="page-width">
+<a id="start_here" class="anchor"></a>
+<div id="page-body" role="main">
+<div class="navbar nav-breadcrumbs">
+<ul id="nav-breadcrumbs" class="linklist navlinks" role="menubar">
+<li class="small-icon icon-home breadcrumbs">
+<span class="crumb" style="display: none;"><a href="https://autohotkey.com" itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" data-navbar-reference="home">Home</a></span> <span class="crumb"><a href="./index.php?sid=00da3997038d7ad1851b0d40a1716515" accesskey="h" itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" data-navbar-reference="index">Board index</a></span>
+<span class="crumb"><a href="./viewforum.php?f=4&amp;sid=00da3997038d7ad1851b0d40a1716515" itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" data-forum-id="4">AutoHotkey</a></span>
+<span class="crumb"><a href="./viewforum.php?f=5&amp;sid=00da3997038d7ad1851b0d40a1716515" itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" data-forum-id="5">Ask For Help</a></span>
+</li>
+<li class="rightside responsive-search" style="display: none;"><a href="./search.php?sid=00da3997038d7ad1851b0d40a1716515" title="View the advanced search options" role="menuitem">Search</a></li>
+<li class="rightside dropdown-container icon-only">
+<a href="#" class="dropdown-trigger time" title="It is currently 28 Jan 2018, 19:31"><i class="fa fa-clock-o"></i></a>
+<div class="dropdown hidden">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li>It is currently 28 Jan 2018, 19:31</li>
+<li>All times are <abbr title="UTC-5">UTC-05:00</abbr></li>
+ </ul>
+</div>
+</li>
+</ul>
+</div>
+<h2 class="topic-title"><a href="./viewtopic.php?f=5&amp;t=3787&amp;sid=00da3997038d7ad1851b0d40a1716515">Save Web Page</a></h2>
+
+<div style="display: none !important;">Get help with using AutoHotkey and its commands and hotkeys<br /></div>
+<div class="action-bar top">
+<div class="buttons">
+<a href="./posting.php?mode=reply&amp;f=5&amp;t=3787&amp;sid=00da3997038d7ad1851b0d40a1716515" class="button icon-button reply-icon" title="Post a reply">
+Post Reply
+</a>
+</div>
+<div class="dropdown-container dropdown-button-control topic-tools">
+<span title="Topic tools" class="button icon-button tools-icon dropdown-trigger dropdown-select"></span>
+<div class="dropdown hidden">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li class="small-icon icon-sendemail"><a href="./memberlist.php?mode=email&amp;t=3787&amp;sid=00da3997038d7ad1851b0d40a1716515" title="Email topic">Email topic</a></li> <li class="small-icon icon-print"><a href="./viewtopic.php?f=5&amp;t=3787&amp;sid=00da3997038d7ad1851b0d40a1716515&amp;view=print" title="Print view" accesskey="p">Print view</a></li> </ul>
+</div>
+</div>
+<div class="search-box" role="search">
+<form method="get" id="topic-search" action="./search.php?sid=00da3997038d7ad1851b0d40a1716515">
+<fieldset>
+<input class="inputbox search tiny" type="search" name="keywords" id="search_keywords" size="20" placeholder="Search this topic…" />
+<button class="button icon-button search-icon" type="submit" title="Search">Search</button>
+<a href="./search.php?sid=00da3997038d7ad1851b0d40a1716515" class="button icon-button search-adv-icon" title="Advanced search">Advanced search</a>
+<input type="hidden" name="t" value="3787" />
+<input type="hidden" name="sf" value="msgonly" />
+<input type="hidden" name="sid" value="00da3997038d7ad1851b0d40a1716515" />
+</fieldset>
+</form>
+</div>
+<div class="pagination">
+7 posts
+&bull; Page <strong>1</strong> of <strong>1</strong>
+</div>
+</div>
+<div id="p20107" class="post has-profile bg2">
+<div class="inner">
+<dl class="postprofile" id="profile20107">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<strong><span class="username">Xander9009</span></strong>
+</dt>
+</dl>
+<div class="postbody">
+<div id="post_content20107">
+<h3 class="first"><a href="#p20107">Save Web Page</a></h3>
+<ul class="post-buttons">
+<li>
+<a href="./posting.php?mode=quote&amp;f=5&amp;p=20107&amp;sid=00da3997038d7ad1851b0d40a1716515" title="Reply with quote" class="button icon-button quote-icon"><span>Quote</span></a>
+</li>
+<li>
+<a href="/boards/topicsolved/mark/solved/20107?sid=00da3997038d7ad1851b0d40a1716515" title="Accept this answer" class="button icon-button topicsolved-icon solve-icon">
+<span>Accept this answer</span>
+</a>
+</li>
+</ul>
+<p class="author"><a href="./viewtopic.php?p=20107&amp;sid=00da3997038d7ad1851b0d40a1716515#p20107">23 Jun 2014, 14:49</a></p>
+<div class="content">I've found a few web page saving scripts, but they don't seem to work for what I'm trying to do. It's both slightly complex and very simple. I need to save this web page as a text file: <a class="postlink" href="http://mtgjson.com/json/">http://mtgjson.com/json/</a><br />The problem is that it's not actually a web page, it's just a folder of files accessible on the website. Is there a way to:<br />A: Save the webpage's contents as a txt file<br />B: Save the webpage itself as an html file<br />C: Copy the contents of the entire page<br /><br />One of the above, obviously not all of them. Preferably the last. Copy it all (or otherwise make it usable in a variable) without actually loading the webpage. Right now, I'm using a kind of brute force approach. It works, but it's a bit clunky. If someone can explain how to use URLDownloadToFile to download a page like this one, that would be awesome. The script I'm using does try to use that function, but the file is never created.<br /><br />[spoiler][code]<br />Run, <a class="postlink" href="http://mtgjson.com/json/">http://mtgjson.com/json/</a><br />Sleep, 3000<br />WinMaximize, A<br />Click, 500, 500<br />Send, ^a<br />Sleep, 500<br />Send, ^c<br />Sleep, 500<br />Send, ^w<br /><br />URLDownloadToFile, <a class="postlink" href="http://mtgjson.com/json/">http://mtgjson.com/json/</a>, AllSetsList.html<br />[/code][/spoiler]</div>
+</div>
+</div>
+</div>
+<div class="back2top"><a href="#top" class="top" title="Top">Top</a></div>
+</div>
+<div id="p20110" class="post has-profile bg1 online">
+<div class="inner">
+<dl class="postprofile" id="profile20110">
+<dt class="no-profile-rank has-avatar">
+<div class="avatar-container">
+<a href="./memberlist.php?mode=viewprofile&amp;u=48&amp;sid=00da3997038d7ad1851b0d40a1716515" class="avatar"><img class="avatar" src="./download/file.php?avatar=48_1449429832.jpg" width="100" height="75" alt="User avatar" /></a>
+</div>
+<a href="./memberlist.php?mode=viewprofile&amp;u=48&amp;sid=00da3997038d7ad1851b0d40a1716515" style="color: #FF0000;" class="username-coloured">tank</a>
+</dt>
+<dd class="profile-posts"><strong>Posts:</strong> <a href="./search.php?author_id=48&amp;sr=posts&amp;sid=00da3997038d7ad1851b0d40a1716515">2209</a></dd>
+<dd class="profile-joined"><strong>Joined:</strong> 28 Sep 2013, 22:15</dd>
+<dd class="profile-custom-field profile-facebook"><strong>Facebook:</strong> charlie.simmons.7334</dd>
+<dd class="profile-custom-field profile-google_plus"><strong>Google:</strong> ttnnkkrr</dd>
+<dd class="profile-custom-field profile-github"><strong>GitHub:</strong> ttnnkkrr</dd>
+<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Louisville KY</dd>
+<dd class="profile-contact">
+<strong>Contact:</strong>
+<div class="dropdown-container dropdown-right dropdown-down">
+<a href="#" class="dropdown-trigger"><span class="imageset icon_contact" title="Contact tank">Contact tank</span></a>
+<div class="dropdown hidden">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<div class="dropdown-contents contact-icons">
+<div>
+<a href="https://www.linkedin.com/pub/charlie-simmons/37/a7/81b/" title="Website" class="last-cell">
+<span class="contact-icon phpbb_website-icon">Website</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</dd>
+</dl>
+<div class="postbody">
+<div id="post_content20110">
+<h3><a href="#p20110">Re: Save Web Page</a></h3>
+<ul class="post-buttons">
+<li>
+<a href="./posting.php?mode=quote&amp;f=5&amp;p=20110&amp;sid=00da3997038d7ad1851b0d40a1716515" title="Reply with quote" class="button icon-button quote-icon"><span>Quote</span></a>
+</li>
+<li>
+<a href="/boards/topicsolved/mark/solved/20110?sid=00da3997038d7ad1851b0d40a1716515" title="Accept this answer" class="button icon-button topicsolved-icon solve-icon">
+<span>Accept this answer</span>
+</a>
+</li>
+</ul>
+<p class="author"><a href="./viewtopic.php?p=20110&amp;sid=00da3997038d7ad1851b0d40a1716515#p20110">23 Jun 2014, 15:27</a></p>
+<div class="content">the problem is really that a web page isnt just one file<br />At the very least it is usually the html, separate CSS file, and images. Dynamic sites could have content generated by javascript that is not in fact part of any source code. <br /><br />and if there are frames its even more complex<br />cookies even more so<br />The site in question appears very simple but you probably need to look in the folder where your script is saved and if that fails specify a full path<br />URLDownloadToFile, <a class="postlink" href="http://mtgjson.com/json/">http://mtgjson.com/json/</a>,%a_mydocuments%\AllSetsList.html</div>
+<div id="sig20110" class="signature">We are troubled on every side‚ yet not distressed; we are perplexed‚ <br />but not in despair; Persecuted‚ but not forsaken; cast down‚ but not destroyed;<br /><a class="postlink" href="https://www.facebook.com/ahkscript.org">https://www.facebook.com/ahkscript.org</a><br />If you have forum suggestions please submit a <a href="https://github.com/ahkscript/forum" class="postlink">pull request</a></div>
+</div>
+</div>
+</div>
+<div class="back2top"><a href="#top" class="top" title="Top">Top</a></div>
+</div>
+<div id="p20113" class="post has-profile bg2">
+<div class="inner">
+<dl class="postprofile" id="profile20113">
+<dt class="no-profile-rank has-avatar">
+<div class="avatar-container">
+<a href="./memberlist.php?mode=viewprofile&amp;u=219&amp;sid=00da3997038d7ad1851b0d40a1716515" class="avatar"><img class="avatar" src="./download/file.php?avatar=219_1423005580.jpg" width="100" height="100" alt="User avatar" /></a>
+</div>
+<a href="./memberlist.php?mode=viewprofile&amp;u=219&amp;sid=00da3997038d7ad1851b0d40a1716515" class="username">atnbueno</a>
+</dt>
+<dd class="profile-posts"><strong>Posts:</strong> <a href="./search.php?author_id=219&amp;sr=posts&amp;sid=00da3997038d7ad1851b0d40a1716515">85</a></dd>
+<dd class="profile-joined"><strong>Joined:</strong> 12 Oct 2013, 04:45</dd>
+</dl>
+<div class="postbody">
+<div id="post_content20113">
+<h3><a href="#p20113">Re: Save Web Page</a></h3>
+<ul class="post-buttons">
+<li>
+<a href="./posting.php?mode=quote&amp;f=5&amp;p=20113&amp;sid=00da3997038d7ad1851b0d40a1716515" title="Reply with quote" class="button icon-button quote-icon"><span>Quote</span></a>
+</li>
+<li>
+<a href="/boards/topicsolved/mark/solved/20113?sid=00da3997038d7ad1851b0d40a1716515" title="Accept this answer" class="button icon-button topicsolved-icon solve-icon">
+<span>Accept this answer</span>
+</a>
+</li>
+</ul>
+<p class="author"><a href="./viewtopic.php?p=20113&amp;sid=00da3997038d7ad1851b0d40a1716515#p20113">23 Jun 2014, 15:50</a></p>
+<div class="content">Hello there.<br /><br />If the page is always like that (a list of files) you can download the page to a text file, read it to extract the filenames and then download one after the other.<br /><br />If you want to work with more complex webpages (like the ones mentioned by <strong>tank</strong>) you'll probably want to use <a href="http://users.ugent.be/~bpuype/wget/" class="postlink">wget</a> (which you can control from AutoHotkey as it is a command line utility).<br /><br /><br />Regards,<br />Antonio</div>
+</div>
+</div>
+</div>
+<div class="back2top"><a href="#top" class="top" title="Top">Top</a></div>
+</div>
+<div id="p20116" class="post has-profile bg1">
+<div class="inner">
+<dl class="postprofile" id="profile20116">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<strong><span class="username">Xander9009</span></strong>
+</dt>
+</dl>
+<div class="postbody">
+<div id="post_content20116">
+<h3><a href="#p20116">Re: Save Web Page</a></h3>
+<ul class="post-buttons">
+<li>
+<a href="./posting.php?mode=quote&amp;f=5&amp;p=20116&amp;sid=00da3997038d7ad1851b0d40a1716515" title="Reply with quote" class="button icon-button quote-icon"><span>Quote</span></a>
+</li>
+<li>
+<a href="/boards/topicsolved/mark/solved/20116?sid=00da3997038d7ad1851b0d40a1716515" title="Accept this answer" class="button icon-button topicsolved-icon solve-icon">
+<span>Accept this answer</span>
+</a>
+</li>
+</ul>
+<p class="author"><a href="./viewtopic.php?p=20116&amp;sid=00da3997038d7ad1851b0d40a1716515#p20116">23 Jun 2014, 17:46</a></p>
+<div class="content">Thanks for the help.<br /><br />Tank: Yes, this page is just one file. It's a single If I view the html, all of the items on the page are represented in normal html. It's all a little strangely organized since it's not actually a webpage, but rather an automatically generated webpage-ish interface for a folder, but it's still got the html which lists everything on the page.<br /><br />atnbueno: Yes the page is always like that. That wasn't just an example, it's the exact page I need to save. It changes periodically, and I need to check it for updates. To do that, I need the list so I can compare it to the files I already have. Downloading the page and extracting the names, like you suggest, is a fantastic idea. In fact, it's exactly the idea I'm trying to do lol. Just can't get the page to save without actually loading it in a browser. I'm trying to do exactly that: save the page's html/contents from AHK without involving Chrome/IE/FF.<br /><br />So, any ideas on how to actually save the page? I tried using wget from a command line, but it needs to be able to run from others' computers, and wget required me to install 4 different programs to get it to work (wget was its own program and it required 3 others).</div>
+</div>
+</div>
+</div>
+<div class="back2top"><a href="#top" class="top" title="Top">Top</a></div>
+</div>
+<div id="p20117" class="post has-profile bg2">
+<div class="inner">
+<dl class="postprofile" id="profile20117">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<strong><span class="username">Xander9009</span></strong>
+</dt>
+</dl>
+<div class="postbody">
+<div id="post_content20117">
+<h3><a href="#p20117">Re: Save Web Page</a></h3>
+<ul class="post-buttons">
+<li>
+<a href="./posting.php?mode=quote&amp;f=5&amp;p=20117&amp;sid=00da3997038d7ad1851b0d40a1716515" title="Reply with quote" class="button icon-button quote-icon"><span>Quote</span></a>
+</li>
+<li>
+<a href="/boards/topicsolved/mark/solved/20117?sid=00da3997038d7ad1851b0d40a1716515" title="Accept this answer" class="button icon-button topicsolved-icon solve-icon">
+<span>Accept this answer</span>
+</a>
+</li>
+</ul>
+<p class="author"><a href="./viewtopic.php?p=20117&amp;sid=00da3997038d7ad1851b0d40a1716515#p20117">23 Jun 2014, 18:04</a></p>
+<div class="content">I found a solution that works perfectly here: <a class="postlink" href="http://www.autohotkey.com/board/topic/94827-select-all-and-copy-a-web-page-in-the-background/">http://www.autohotkey.com/board/topic/9 ... ackground/</a></div>
+</div>
+</div>
+</div>
+<div class="back2top"><a href="#top" class="top" title="Top">Top</a></div>
+</div>
+<div id="p20127" class="post has-profile bg1">
+<div class="inner">
+<dl class="postprofile" id="profile20127">
+<dt class="no-profile-rank has-avatar">
+<div class="avatar-container">
+<a href="./memberlist.php?mode=viewprofile&amp;u=219&amp;sid=00da3997038d7ad1851b0d40a1716515" class="avatar"><img class="avatar" src="./download/file.php?avatar=219_1423005580.jpg" width="100" height="100" alt="User avatar" /></a>
+</div>
+<a href="./memberlist.php?mode=viewprofile&amp;u=219&amp;sid=00da3997038d7ad1851b0d40a1716515" class="username">atnbueno</a>
+</dt>
+<dd class="profile-posts"><strong>Posts:</strong> <a href="./search.php?author_id=219&amp;sr=posts&amp;sid=00da3997038d7ad1851b0d40a1716515">85</a></dd>
+<dd class="profile-joined"><strong>Joined:</strong> 12 Oct 2013, 04:45</dd>
+</dl>
+<div class="postbody">
+<div id="post_content20127">
+<h3><a href="#p20127">Re: Save Web Page</a></h3>
+<ul class="post-buttons">
+<li>
+<a href="./posting.php?mode=quote&amp;f=5&amp;p=20127&amp;sid=00da3997038d7ad1851b0d40a1716515" title="Reply with quote" class="button icon-button quote-icon"><span>Quote</span></a>
+</li>
+<li>
+<a href="/boards/topicsolved/mark/solved/20127?sid=00da3997038d7ad1851b0d40a1716515" title="Accept this answer" class="button icon-button topicsolved-icon solve-icon">
+<span>Accept this answer</span>
+</a>
+</li>
+</ul>
+<p class="author"><a href="./viewtopic.php?p=20127&amp;sid=00da3997038d7ad1851b0d40a1716515#p20127">24 Jun 2014, 01:36</a></p>
+<div class="content">Hello again.<br /><br />If that works for you I'm glad, but it seems unnecessarily complicated. Wouldn't this also work for you?<br /><div class="codebox codebox_plus"><p>Code: <a href="#" onclick="codebox_plus_select(this); return false;">[Select all]</a>&nbsp;<a href="#" onclick="codebox_plus_toggle(this, '[Expand]', '[Collapse]'); return false;">[Expand]</a>&nbsp;<a href="/boards/codeboxplus/download/20127-1?sid=00da3997038d7ad1851b0d40a1716515" onclick="window.open(this.href); return false;">[Download]</a> <span class="codebox_plus_about"><a href="http://qbnz.com/highlighter/" target="_blank">GeSHi</a> &copy; <a href="https://github.com/ahkscript/phpBB-Extension-Codebox-Plus" target="_blank">Codebox Plus</a></span></p><code class="collapsed"><pre class="autohotkey">URL <span class="sy0">:=</span> <span class="st0">&quot;http://mtgjson.com/json/&quot;</span><br /><br /><a target="_blank" href="https://autohotkey.com/docs/URLDownloadToFile"><span class="kw3">URLDownloadToFile</span></a><span class="sy0">,</span> <span class="re0">%URL%</span><span class="sy0">,</span> %<a target="_blank" href="https://autohotkey.com/docs/A_Temp"><span class="kw2">A_Temp</span></a>%\dir<span class="sy0">.</span>html <span class="co1">; saves the webpage to a temp file</span><br /><a target="_blank" href="https://autohotkey.com/docs/Loop"><span class="kw3">Loop</span></a><span class="sy0">,</span> Read<span class="sy0">,</span> %<a target="_blank" href="https://autohotkey.com/docs/A_Temp"><span class="kw2">A_Temp</span></a>%\dir<span class="sy0">.</span>html <span class="co1">; reads the temp file line by line</span><br /><span class="br0">&#123;</span><br />	<a target="_blank" href="https://autohotkey.com/docs/StringSplit"><span class="kw3">StringSplit</span></a><span class="sy0">,</span> FileInfo<span class="sy0">,</span> <a target="_blank" href="https://autohotkey.com/docs/A_LoopReadLine"><span class="kw2">A_LoopReadLine</span></a><span class="sy0">,</span> `<span class="st0">&quot; ; quotes (&quot;</span><span class="br0">&#41;</span> surround the filenames <span class="kw1">in</span> the web page<br />	<a target="_blank" href="https://autohotkey.com/docs/If"><span class="kw3">If</span></a> <span class="br0">&#40;</span><span class="br0">&#40;</span>FileInfo0 <span class="sy0">==</span> <span class="nu0">3</span><span class="br0">&#41;</span> <span class="kw1">and</span> <span class="br0">&#40;</span>FileInfo2 !<span class="sy0">=</span> <span class="st0">&quot;../&quot;</span><span class="br0">&#41;</span> <span class="kw1">and</span> <span class="br0">&#40;</span>FileInfo3 !<span class="sy0">=</span> <span class="st0">&quot;&gt;&quot;</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="co1">; filters out undesired lines</span><br />	<span class="br0">&#123;</span><br />		<span class="co1">; Now do something with FileInfo2 (each linked filename)</span><br />		<a target="_blank" href="https://autohotkey.com/docs/MsgBox"><span class="kw3">MsgBox</span></a> <span class="re0">%URL%</span><span class="re0">%FileInfo2%</span><br />	<span class="br0">&#125;</span><br /><span class="br0">&#125;</span><br /><a target="_blank" href="https://autohotkey.com/docs/FileDelete"><span class="kw3">FileDelete</span></a><span class="sy0">,</span> %<a target="_blank" href="https://autohotkey.com/docs/A_Temp"><span class="kw2">A_Temp</span></a>%\dir<span class="sy0">.</span>html <span class="co1">; deletes the temp file</span></pre></code></div><br />With a bit more work you could also get the date and the filesize (they are in <code style="font-family: Consolas, Monaco, 'Andale Mono', 'Courier New', Courier, monospace; font-size: 12px; border: 1px dotted #9A9B9D; padding: 0 3px; border-radius: 4px">FileInfo3</code>), and without additional downloads.</div>
+</div>
+</div>
+</div>
+<div class="back2top"><a href="#top" class="top" title="Top">Top</a></div>
+</div>
+<div id="p20128" class="post has-profile bg2">
+<div class="inner">
+<dl class="postprofile" id="profile20128">
+<dt class="no-profile-rank no-avatar">
+<div class="avatar-container">
+</div>
+<a href="./memberlist.php?mode=viewprofile&amp;u=447&amp;sid=00da3997038d7ad1851b0d40a1716515" class="username">ozzii</a>
+</dt>
+<dd class="profile-posts"><strong>Posts:</strong> <a href="./search.php?author_id=447&amp;sr=posts&amp;sid=00da3997038d7ad1851b0d40a1716515">297</a></dd>
+<dd class="profile-joined"><strong>Joined:</strong> 30 Oct 2013, 06:04</dd>
+</dl>
+<div class="postbody">
+<div id="post_content20128">
+<h3><a href="#p20128">Re: Save Web Page</a></h3>
+<ul class="post-buttons">
+<li>
+<a href="./posting.php?mode=quote&amp;f=5&amp;p=20128&amp;sid=00da3997038d7ad1851b0d40a1716515" title="Reply with quote" class="button icon-button quote-icon"><span>Quote</span></a>
+</li>
+<li>
+<a href="/boards/topicsolved/mark/solved/20128?sid=00da3997038d7ad1851b0d40a1716515" title="Accept this answer" class="button icon-button topicsolved-icon solve-icon">
+<span>Accept this answer</span>
+</a>
+</li>
+</ul>
+<p class="author"><a href="./viewtopic.php?p=20128&amp;sid=00da3997038d7ad1851b0d40a1716515#p20128">24 Jun 2014, 02:27</a></p>
+<div class="content">If the structure of the file doesn't change why you do not keep the new downloaded file and compare it to the old one.<br />And after you can do what you want with it.<br />Exemple.<br /><br /><div class="codebox codebox_plus"><p>Code: <a href="#" onclick="codebox_plus_select(this); return false;">[Select all]</a>&nbsp;<a href="#" onclick="codebox_plus_toggle(this, '[Expand]', '[Collapse]'); return false;">[Expand]</a>&nbsp;<a href="/boards/codeboxplus/download/20128-1?sid=00da3997038d7ad1851b0d40a1716515" onclick="window.open(this.href); return false;">[Download]</a> <span class="codebox_plus_about"><a href="http://qbnz.com/highlighter/" target="_blank">GeSHi</a> &copy; <a href="https://github.com/ahkscript/phpBB-Extension-Codebox-Plus" target="_blank">Codebox Plus</a></span></p><code class="collapsed"><pre class="autohotkey">URL <span class="sy0">:=</span> <span class="st0">&quot;http://mtgjson.com/json/&quot;</span><br /><a target="_blank" href="https://autohotkey.com/docs/URLDownloadToFile"><span class="kw3">URLDownloadToFile</span></a><span class="sy0">,</span> <span class="re0">%URL%</span><span class="sy0">,</span> %<a target="_blank" href="https://autohotkey.com/docs/A_Temp"><span class="kw2">A_Temp</span></a>%\<span class="kw1">new</span><span class="sy0">.</span>html<br /><br /><a target="_blank" href="https://autohotkey.com/docs/FileRead"><span class="kw3">FileRead</span></a><span class="sy0">,</span> <span class="kw1">NEW</span><span class="sy0">,</span> %<a target="_blank" href="https://autohotkey.com/docs/A_Temp"><span class="kw2">A_Temp</span></a>%\<span class="kw1">new</span><span class="sy0">.</span>html<br /><a target="_blank" href="https://autohotkey.com/docs/FileRead"><span class="kw3">FileRead</span></a><span class="sy0">,</span> OLD<span class="sy0">,</span> %<a target="_blank" href="https://autohotkey.com/docs/A_Temp"><span class="kw2">A_Temp</span></a>%\old<span class="sy0">.</span>html<br /><a target="_blank" href="https://autohotkey.com/docs/If"><span class="kw3">If</span></a> <span class="br0">&#40;</span> <span class="kw1">NEW</span> <span class="sy0">=</span> OLD <span class="br0">&#41;</span> <span class="co1">;the file is unchanged</span><br /><span class="br0">&#125;</span><br />	<a target="_blank" href="https://autohotkey.com/docs/MsgBox"><span class="kw3">MsgBox</span></a> SAME<br /><span class="br0">&#125;</span><br /><a target="_blank" href="https://autohotkey.com/docs/Else"><span class="kw3">else</span></a> <span class="co1">;keep the new file</span><br /><span class="br0">&#123;</span><br />	<a target="_blank" href="https://autohotkey.com/docs/FileMove"><span class="kw3">FileMove</span></a><span class="sy0">,</span> %<a target="_blank" href="https://autohotkey.com/docs/A_ScriptDir"><span class="kw2">A_ScriptDir</span></a>%\<span class="kw1">new</span><span class="sy0">.</span>html<span class="sy0">,</span> %<a target="_blank" href="https://autohotkey.com/docs/A_ScriptDir"><span class="kw2">A_ScriptDir</span></a>%\old<span class="sy0">.</span>html<span class="sy0">,</span> <span class="nu0">1</span><br /><span class="br0">&#125;</span></pre></code></div></div>
+</div>
+</div>
+</div>
+<div class="back2top"><a href="#top" class="top" title="Top">Top</a></div>
+</div>
+<form id="viewtopic" method="post" action="./viewtopic.php?f=5&amp;t=3787&amp;sid=00da3997038d7ad1851b0d40a1716515">
+<fieldset class="display-options" style="margin-top: 0; ">
+<label>Display posts from previous: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+<label>Sort by <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label> <label><select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+<input type="submit" name="sort" value="Go" class="button2" />
+</fieldset>
+</form>
+<hr />
+<div class="action-bar bottom">
+<div class="buttons">
+<a href="./posting.php?mode=reply&amp;f=5&amp;t=3787&amp;sid=00da3997038d7ad1851b0d40a1716515" class="button icon-button reply-icon" title="Post a reply">
+Post Reply
+</a>
+</div>
+<div class="dropdown-container dropdown-button-control topic-tools">
+<span title="Topic tools" class="button icon-button tools-icon dropdown-trigger dropdown-select"></span>
+<div class="dropdown hidden">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li class="small-icon icon-sendemail"><a href="./memberlist.php?mode=email&amp;t=3787&amp;sid=00da3997038d7ad1851b0d40a1716515" title="Email topic">Email topic</a></li> <li class="small-icon icon-print"><a href="./viewtopic.php?f=5&amp;t=3787&amp;sid=00da3997038d7ad1851b0d40a1716515&amp;view=print" title="Print view" accesskey="p">Print view</a></li> </ul>
+</div>
+</div>
+<div class="pagination">
+7 posts
+&bull; Page <strong>1</strong> of <strong>1</strong>
+</div>
+<div class="clear"></div>
+</div>
+<p class="jumpbox-return"><a href="./viewforum.php?f=5&amp;sid=00da3997038d7ad1851b0d40a1716515" class="left-box arrow-left" accesskey="r">Return to “Ask For Help”</a></p>
+<div class="dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+<span title="Jump to" class="dropdown-trigger button dropdown-select">
+Jump to </span>
+<div class="dropdown hidden">
+<div class="pointer"><div class="pointer-inner"></div></div>
+<ul class="dropdown-contents">
+<li><a href="./viewforum.php?f=1&amp;sid=00da3997038d7ad1851b0d40a1716515">AutoHotkey Foundation</a></li>
+<li>&nbsp; &nbsp;<a href="./viewforum.php?f=2&amp;sid=00da3997038d7ad1851b0d40a1716515">About This Community</a></li>
+<li>&nbsp; &nbsp;<a href="./viewforum.php?f=3&amp;sid=00da3997038d7ad1851b0d40a1716515">Forum Issues</a></li>
+<li><a href="./viewforum.php?f=4&amp;sid=00da3997038d7ad1851b0d40a1716515">AutoHotkey</a></li>
+<li>&nbsp; &nbsp;<a href="./viewforum.php?f=5&amp;sid=00da3997038d7ad1851b0d40a1716515">Ask For Help</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=18&amp;sid=00da3997038d7ad1851b0d40a1716515">Gaming</a></li>
+<li>&nbsp; &nbsp;<a href="./viewforum.php?f=6&amp;sid=00da3997038d7ad1851b0d40a1716515">Scripts and Functions</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=19&amp;sid=00da3997038d7ad1851b0d40a1716515">Gaming</a></li>
+<li>&nbsp; &nbsp;<a href="./viewforum.php?f=7&amp;sid=00da3997038d7ad1851b0d40a1716515">Tutorials</a></li>
+<li>&nbsp; &nbsp;<a href="./viewforum.php?f=13&amp;sid=00da3997038d7ad1851b0d40a1716515">Wish List</a></li>
+<li>&nbsp; &nbsp;<a href="./viewforum.php?f=14&amp;sid=00da3997038d7ad1851b0d40a1716515">Bug Reports</a></li>
+<li>&nbsp; &nbsp;<a href="./viewforum.php?f=37&amp;sid=00da3997038d7ad1851b0d40a1716515">AutoHotkey v2 Development</a></li>
+<li>&nbsp; &nbsp;<a href="./viewforum.php?f=65&amp;sid=00da3997038d7ad1851b0d40a1716515">AutoHotkey_H</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=67&amp;sid=00da3997038d7ad1851b0d40a1716515">Ask For Help</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=66&amp;sid=00da3997038d7ad1851b0d40a1716515">Development</a></li>
+<li>&nbsp; &nbsp;<a href="./viewforum.php?f=24&amp;sid=00da3997038d7ad1851b0d40a1716515">Announcements</a></li>
+<li>&nbsp; &nbsp;<a href="./viewforum.php?f=60&amp;sid=00da3997038d7ad1851b0d40a1716515">Editors</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=62&amp;sid=00da3997038d7ad1851b0d40a1716515">AHK Studio</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=63&amp;sid=00da3997038d7ad1851b0d40a1716515">Pulovers Macro Creator</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=61&amp;sid=00da3997038d7ad1851b0d40a1716515">SciTE4AutoHotkey</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=64&amp;sid=00da3997038d7ad1851b0d40a1716515">AutoGUI</a></li>
+<li><a href="./viewforum.php?f=16&amp;sid=00da3997038d7ad1851b0d40a1716515">General</a></li>
+<li>&nbsp; &nbsp;<a href="./viewforum.php?f=22&amp;sid=00da3997038d7ad1851b0d40a1716515">Other Utilities &amp; Resources</a></li>
+<li>&nbsp; &nbsp;<a href="./viewforum.php?f=23&amp;sid=00da3997038d7ad1851b0d40a1716515">Other Programming Languages</a></li>
+<li>&nbsp; &nbsp;<a href="./viewforum.php?f=17&amp;sid=00da3997038d7ad1851b0d40a1716515">Offtopic</a></li>
+<li><a href="./viewforum.php?f=38&amp;sid=00da3997038d7ad1851b0d40a1716515">Other languages</a></li>
+<li>&nbsp; &nbsp;<a href="./viewforum.php?f=8&amp;sid=00da3997038d7ad1851b0d40a1716515">Deutsch (German)</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=9&amp;sid=00da3997038d7ad1851b0d40a1716515">Ich brauche Hilfe</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=20&amp;sid=00da3997038d7ad1851b0d40a1716515">Spiele</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=10&amp;sid=00da3997038d7ad1851b0d40a1716515">Skripte und Funktionen</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=11&amp;sid=00da3997038d7ad1851b0d40a1716515">Tutorials</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=15&amp;sid=00da3997038d7ad1851b0d40a1716515">Tooltime</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=12&amp;sid=00da3997038d7ad1851b0d40a1716515">Allgemeines</a></li>
+<li>&nbsp; &nbsp;<a href="./viewforum.php?f=26&amp;sid=00da3997038d7ad1851b0d40a1716515">中文 (Chinese)</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=27&amp;sid=00da3997038d7ad1851b0d40a1716515">请求帮助</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=28&amp;sid=00da3997038d7ad1851b0d40a1716515">脚本函数</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=29&amp;sid=00da3997038d7ad1851b0d40a1716515">教程资料</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=30&amp;sid=00da3997038d7ad1851b0d40a1716515">相关工具</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=31&amp;sid=00da3997038d7ad1851b0d40a1716515">其他</a></li>
+<li>&nbsp; &nbsp;<a href="./viewforum.php?f=39&amp;sid=00da3997038d7ad1851b0d40a1716515">Español (Spanish)</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=40&amp;sid=00da3997038d7ad1851b0d40a1716515">Pedir Ayuda</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=41&amp;sid=00da3997038d7ad1851b0d40a1716515">Automatización de Juegos</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=42&amp;sid=00da3997038d7ad1851b0d40a1716515">Scripts y Funciones</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=43&amp;sid=00da3997038d7ad1851b0d40a1716515">Tutoriales</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=44&amp;sid=00da3997038d7ad1851b0d40a1716515">Otras Utilidades y Recursos</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=45&amp;sid=00da3997038d7ad1851b0d40a1716515">General</a></li>
+<li>&nbsp; &nbsp;<a href="./viewforum.php?f=46&amp;sid=00da3997038d7ad1851b0d40a1716515">Русский (Russian)</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=47&amp;sid=00da3997038d7ad1851b0d40a1716515">Помощь</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=52&amp;sid=00da3997038d7ad1851b0d40a1716515">Скрипты для Игр</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=48&amp;sid=00da3997038d7ad1851b0d40a1716515">Скрипты и библиотеки</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=49&amp;sid=00da3997038d7ad1851b0d40a1716515">Статьи и руководства</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=50&amp;sid=00da3997038d7ad1851b0d40a1716515">Прочие ресурсы и ПО.</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=51&amp;sid=00da3997038d7ad1851b0d40a1716515">Свободное общение</a></li>
+<li>&nbsp; &nbsp;<a href="./viewforum.php?f=54&amp;sid=00da3997038d7ad1851b0d40a1716515">Français (French)</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=55&amp;sid=00da3997038d7ad1851b0d40a1716515">J'ai besoin d'aide</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=56&amp;sid=00da3997038d7ad1851b0d40a1716515">Scripts et Fonctions</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=57&amp;sid=00da3997038d7ad1851b0d40a1716515">Tutoriels</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=58&amp;sid=00da3997038d7ad1851b0d40a1716515">Autres Utilitaires et Ressources</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=59&amp;sid=00da3997038d7ad1851b0d40a1716515">Hors Sujet</a></li>
+<li>&nbsp; &nbsp;<a href="./viewforum.php?f=68&amp;sid=00da3997038d7ad1851b0d40a1716515">Português (Portuguese)</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=69&amp;sid=00da3997038d7ad1851b0d40a1716515">Eu preciso de ajuda</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=70&amp;sid=00da3997038d7ad1851b0d40a1716515">Scripts e Funções</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=71&amp;sid=00da3997038d7ad1851b0d40a1716515">Tutoriais</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=72&amp;sid=00da3997038d7ad1851b0d40a1716515">Outras utilidades e recursos</a></li>
+<li>&nbsp; &nbsp;&nbsp; &nbsp;<a href="./viewforum.php?f=73&amp;sid=00da3997038d7ad1851b0d40a1716515">Fora do assunto</a></li>
+</ul>
+</div>
+</div>
+<div class="stat-block online-list">
+<h3>Who is online</h3>
+<p>Users browsing this forum: <a href="./memberlist.php?mode=viewprofile&amp;u=80&amp;sid=00da3997038d7ad1851b0d40a1716515" class="username">gregster</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=70602&amp;sid=00da3997038d7ad1851b0d40a1716515" class="username">R5Dad</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=80786&amp;sid=00da3997038d7ad1851b0d40a1716515" class="username">Scr1pter</a> and 42 guests</p>
+</div>
+</div>
+<div class="navbar" role="navigation">
+<div class="inner">
+<ul id="nav-footer" class="linklist bulletin" role="menubar">
+<li class="small-icon icon-home breadcrumbs">
+<span class="crumb"><a href="https://autohotkey.com" data-navbar-reference="home">Home</a></span>
+<span class="crumb"><a href="./index.php?sid=00da3997038d7ad1851b0d40a1716515" data-navbar-reference="index">Board index</a></span>
+</li>
+<li class="rightside">All times are <abbr title="UTC-5">UTC-05:00</abbr></li>
+<li class="small-icon icon-delete-cookies rightside"><a href="./ucp.php?mode=delete_cookies&amp;sid=00da3997038d7ad1851b0d40a1716515" data-ajax="true" data-refresh="true" role="menuitem">Delete all board cookies</a></li>
+<li class="small-icon icon-team rightside" data-last-responsive="true"><a href="./memberlist.php?mode=team&amp;sid=00da3997038d7ad1851b0d40a1716515" role="menuitem">The team</a></li>
+<li class="small-icon icon-contact rightside" data-last-responsive="true"><a href="./memberlist.php?mode=contactadmin&amp;sid=00da3997038d7ad1851b0d40a1716515" role="menuitem">Contact us</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="page-footer" class="page-width" role="contentinfo">
+<div class="copyright">
+Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited
+<br />Style by <a href="http://www.artodia.com/">Arty</a>
+</div>
+<div id="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+<div id="darken">&nbsp;</div>
+</div>
+<div id="loading_indicator"></div>
+<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+<a href="#" class="alert_close"></a>
+<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+</div>
+<div id="phpbb_confirm" class="phpbb_alert">
+<a href="#" class="alert_close"></a>
+<div class="alert_text"></div>
+</div>
+</div>
+<div>
+<a id="bottom" class="anchor" accesskey="z"></a>
+</div>
+<script type="text/javascript" src="./assets/javascript/jquery.min.js?assets_version=100"></script>
+<script type="text/javascript" src="./assets/javascript/core.js?assets_version=100"></script>
+<script>
+
+(function($) {  // Avoid conflicts with other libraries
+
+'use strict';
+
+$.fn.extend({
+	borderHover: function() {
+		return this.each(function() {
+			$(this).css({
+				'border': 'solid 3px transparent',
+				'transition': 'border-color 0.1s ease-out',
+				'border-radius': '6px',
+				'cursor': 'pointer'
+			}).hover(function() {
+				$(this).css('border-color', '#4ae');
+			}, function() {
+				$(this).css('border-color', 'transparent');
+			});
+		});
+	}
+});
+
+$(function() {
+	var resizeWidth = 768,
+		targetImage = $('.postimage'),
+		galleryName = 'post-gallery',
+		imagesIndex = 0,
+		mobileWidth = 900;
+			targetImage = targetImage.not(function() {
+			return $(this).closest('.signature').length > 0;
+		});
+		if (resizeWidth > 0 && $(window).width() > mobileWidth) {
+		targetImage.css('max-width', resizeWidth + 'px');
+	} else {
+		return;
+	}
+	// enclosing the following in a setTimeout seems to solve issues with
+	// images not being ready and causing $(this).width() to return 0.
+	setTimeout(function() {
+		targetImage.one('load', function() {
+			if ($(this).closest('.postlink').length > 0) return;
+			imagesIndex = (1) ? '' : imagesIndex + 1;
+			if ($(this).parent('a').length > 0) {
+				if ($(this).outerWidth() >= resizeWidth) {
+					$(this).parent('a').attr({
+						'data-lightbox': galleryName + imagesIndex,
+						'data-title': $(this).attr('alt')
+					}).end().borderHover();
+				}
+			}
+			else if ($(this).outerWidth() >= resizeWidth) {
+				$(this).wrap(function() {
+					var url = $(this).attr('src');
+					return $('<a/>').attr({
+						'href': url,
+						'data-lightbox': galleryName + imagesIndex,
+						'data-title': (url.indexOf('download/file.php') !== -1) ? $(this).attr('alt') : url.split('/').pop()
+					});
+				}).borderHover();
+			}
+		}).each(function() {
+			if (this.complete) $(this).load();
+		});
+	}, 0);
+});
+
+})(jQuery);
+
+</script>
+<script type="text/javascript" src="./styles/simplicity/template/forum_fn.js?assets_version=100"></script>
+<script type="text/javascript" src="./styles/simplicity/template/ajax.js?assets_version=100"></script>
+<script type="text/javascript" src="./styles/simplicity/template/highlightsolved.js?assets_version=100"></script>
+<script type="text/javascript" src="./ext/vse/lightbox/styles/all/template/lightbox/js/lightbox.min.js?assets_version=100"></script>
+</body>
+</html>

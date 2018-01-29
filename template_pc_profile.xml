@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+	<app_group>
+		<group>
+			<apps>
+				<Invalid_Name id="1" ahk="True">001</Invalid_Name>
+				<Invalid_Name id="2" ahk="True">002</Invalid_Name>
+				<Invalid_Name id="3" ahk="True">003</Invalid_Name>
+			</apps>
+			<name>Le group</name>
+			<path>C:\dadas\</path>
+		</group>
+	</app_group>
+	<Overwrite>
+		<Invalid_Name id="Test Program" ahk="True">
+			<install_path>.\ytiiutu\Test Program.exe</install_path>
+		</Invalid_Name>
+	</Overwrite>
+</ROOT>

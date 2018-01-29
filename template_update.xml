@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+	<app>
+		<author>Le App Natural Name</author>
+		<compagny>Le compagny</compagny>
+		<default_path>compagny\product</default_path>
+		<download_date>24/12/2018</download_date>
+		<group>Le Group</group>
+		<id>LeAPP01</id>
+		<install_path>{Author}{Category}{default_path}{download_date}\lol\</install_path>
+		<name>Le App Natural Name</name>
+		<name_regex>@#$%^()</name_regex>
+		<operations>
+			<operation>
+				<from>bathroom</from>
+				<ovewrite>true</ovewrite>
+				<to>hell</to>
+				<type>move</type>
+			</operation>
+		</operations>
+		<url_download>URL1</url_download>
+		<url_download_regex>#$%^</url_download_regex>
+		<url_info>URL1</url_info>
+		<version>1.3.4.2</version>
+	</app>
+</ROOT>
+
+<!--
+<root>
+	<group>
+		<name>NirSoft</name>
+		<program>
+			<name>Test Program</name>
+			<urls>
+				<url>www1</url>
+				<url>www2</url>
+			</urls>
+			<name_pattern>regex pattern</name_pattern>
+		</program>
+		<program>
+		[...]
+		</program>
+	</group>
+</root>
+
+
+
+<root>
+	<AppID>LeAPP01</AppID>
+	<AppName>Le App Natural Name</AppName>
+	<AppGroup>Le Group</AppGroup>
+	<DownURL>URL1</DownURL>
+	<DownURL>URL2</DownURL>
+	<PageURL>URL1</PageURL>
+	<PageURL>URL2</PageURL>
+	<PageURL>URL3</PageURL>
+	<RelPath>.\compagny\product\</RelPath>
+	<InstallDir>{Author}{Category}{RelPath}{DownloadDate}\lol\</InstallDir>
+</root>
+
+
+<root>
+	<app>
+		<id>LeAPP01</id>
+		<name>Le App Natural Name</name>
+		<name_regex>@#$%^()</name_regex>
+		<version>1.3.4.2</version>
+		<author>Le App Natural Name</author>
+		<compagny>Le compagny</compagny>
+		<download_date>24/12/2018</download_date>
+		<group>Le Group</group>
+		<url_download>
+			<url>URL1</url>
+			<url>URL2</url>
+		</url_download>
+		<url_info>
+			<url>URL1</url>
+			<url>URL2</url>
+			<url>URL3</url>
+		</url_info>
+		<install_path>{Author}{Category}{default_path}{download_date}\lol\</install_path>
+		<operations>
+			<operation>
+				<type>move</type>
+				<from>bathroom</from>
+				<to>hell</to>
+				<ovewrite>true</ovewrite>
+			</operation>
+		</operations>
+		<default_path>compagny\product</default_path>
+	</app>
+</root>
+
+
+<ROOT>
+	<app>
+		<author>Le App Natural Name</author>
+		<compagny>Le compagny</compagny>
+		<default_path>compagny\product</default_path>
+		<download_date>24/12/2018</download_date>
+		<group>Le Group</group>
+		<id>LeAPP01</id>
+		<install_path>{Author}{Category}{default_path}{download_date}\lol\</install_path>
+		<name>Le App Natural Name</name>
+		<name_regex>@#$%^()</name_regex>
+		<operations>
+			<operation>
+				<from>bathroom</from>
+				<ovewrite>true</ovewrite>
+				<to>hell</to>
+				<type>move</type>
+			</operation>
+		</operations>
+		<url_download>
+			<Invalid_Name id="1" ahk="True">URL1</Invalid_Name>
+			<Invalid_Name id="2" ahk="True">URL2</Invalid_Name>
+		</url_download>
+		<url_info>
+			<Invalid_Name id="1" ahk="True">URL1</Invalid_Name>
+			<Invalid_Name id="2" ahk="True">URL2</Invalid_Name>
+			<Invalid_Name id="3" ahk="True">URL3</Invalid_Name>
+		</url_info>
+		<version>1.3.4.2</version>
+	</app>
+</ROOT>
+
+
+
+-->
