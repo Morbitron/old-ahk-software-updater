@@ -11,12 +11,12 @@
 		<name>Le App Natural Name</name>
 		<name_regex>@#$%^()</name_regex>
 		<operations>
-			<operation>
+			<Invalid_Name id="1" ahk="True">
 				<from>bathroom</from>
 				<ovewrite>true</ovewrite>
 				<to>hell</to>
 				<type>move</type>
-			</operation>
+			</Invalid_Name>
 		</operations>
 		<url_download>URL1</url_download>
 		<url_download_regex>#$%^</url_download_regex>

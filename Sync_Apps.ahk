@@ -52,22 +52,46 @@ InstallApp(app_url, TEMP_FOLDER){
 global FOLDER_library := "lib"
 global FOLDER_DOWNLOAD := "download"
 
+;MsgBox, % D_TraceObj(XA_Load("template_update.xml"))
+;MsgBox, % D_TraceObj(XA_Load("template_pc_profile.xml"))
+
+
+
 ;leXML := XA_Load("template_pc_profile.xml") 
-;MsgBox, % D_TraceObj(leXML)
+
 ;XA_Save(leXML,"text2.xml") 
 ;URLDownloadToFile, https://autohotkey.com/boards/viewtopic.php?t=3787, page.html
 ;lol := URLToVar("https://autohotkey.com/boards/viewtopic.php?t=3787")
-D_ShowText(URLToVar("https://autohotkey.com/boards/viewtopic.php?t=3787"))
 
+;D_ShowText(URLToVar("https://autohotkey.com/boards/viewtopic.php?t=3787"))
 
+;pop := URLToVar("https://filehippo.com/fr/download_recuva/")
+/*
+pop :=  XA_Load("test_page.xml")
+D_ShowText(D_TraceObj(pop))
 
+pop := "<ROOT>" . pop . "</ROOT>"
+pop := XA_Load_Var(pop)
+pop := D_TraceObj(pop)
+;(D_TraceObj(XA_Load_Var()))
+Msgbox, % pop
 
+*/
 
+/*
+<a
+	class="program-header-download-link green button-link active long download-button"
+	href="https://filehippo.com/download_recuva/download/14611e2ab2d6691a4ea66b886feae9df/"
+	onclick="_gaq.push(['_trackEvent', 'Download', 'Download, DM Disabled', 'recuva']);"
+	data-download-url="" style="max-width: 268px;"
+>
+<span>Télécharger dernière version</span>
+<span class="normal">(5.31MB)</span>
+</a>
+*/
 
-
-
-
-
+;(<a.*[^>]){1}
+;(<a.*[^>]){1}|(?1)href=".*[^"]
 
 /*
 DATA TYPES ////////////////////////////////////
@@ -95,8 +119,6 @@ PC File/Folder Path config -----------------------
 }
 
 
-
-
 App PC File/Folder -----------------------
 {
 	FolderRuleName:"",
@@ -105,14 +127,8 @@ App PC File/Folder -----------------------
 		{"type":"move", "In":"", "Out":"", "options":["",""]},
 		{"type":"copy", "In":"", "Out":"", "options":["",""]},
 		{"type":"delete", "In":"", "options":["",""]}
-	]
+		]
 }
-
-
-
-
-
-
 
 
 ;JSON Indentation

@@ -41,6 +41,22 @@ XA_Load(Path) {
 	Return XMLRoot
 }
 
+
+XA_Load_Var(input_text) {
+	Local XMLText, XMLObj, XMLRoot, Root1, Root2
+	
+	XMLText := input_text
+	
+	StringReplace, XMLText, XMLText, %A_Space%&%A_Space%, %A_Space%&amp;%A_Space%, All ; dirty hack
+	
+	XMLObj	:= XA_LoadXML(XMLText)
+	;XMLObj	:= XA_LoadXML(Path)
+	XMLObj	:= XMLObj.selectSingleNode("/*")
+	XMLRoot := XA_XMLToArray(XMLObj.childNodes)
+	
+	Return XMLRoot
+}
+
 XA_XMLToArray(nodes, NodeName="") {
 	Obj := Array()
 	
