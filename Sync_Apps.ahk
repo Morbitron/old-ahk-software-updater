@@ -47,6 +47,7 @@ InstallApp(app_url, TEMP_FOLDER){
 #include <AHK_general_functions>
 #include <Debug>
 #include <XA>
+#include <HTML>
 #include <7zip>
 
 global FOLDER_library := "lib"
@@ -54,6 +55,11 @@ global FOLDER_DOWNLOAD := "download"
 
 ;MsgBox, % D_TraceObj(XA_Load("template_update.xml"))
 ;MsgBox, % D_TraceObj(XA_Load("template_pc_profile.xml"))
+
+lolo := HTML_Load("page.html")
+msgbox, % lolo
+sleep 3000
+exitapp
 
 
 
