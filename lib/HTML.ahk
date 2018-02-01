@@ -15,6 +15,13 @@ Notes:
 - added HTML_CleanInvalidChars()
 
 */
+#SingleInstance force
+#include AHK_general_functions.ahk
+#include Debug.ahk
+D_ShowText(HTML_Load("..\app_sample.html"))
+
+
+
 HTML_Save(Array, Path) {
 	FileDelete, % Path
 	;FileAppend, % "<?xml version=""1.0"" encoding=""UTF-8""?>`n<" . Array . ">`n" . HTML_ArrayToXML(Array) . "`n</" . Array . ">", % Path, UTF-8
@@ -38,7 +45,12 @@ HTML_Load(Path) {
 	document := ComObjCreate("HTMLfile")
 	document.write(XMLText)
 	
-	return document.getElementById("logo").href
+	;nodes := document.GetElementsByTagName("a")
+	;node := nodes.OuterXml
+	;msgbox, % document.GetElementsByTagName("a")[3].innerHTML
+	msgbox, % document.ToString()
+	
+	return 
 	
 	
 	
