@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<cexml>
+	<files>
+	</files>
+	<Libraries file="Libraries" id="1">
+		<main file="D:\[LD]\Documents\Autohotkey\Lib\DebugWindow.AHK" id="2">
+			<file dir="D:\[LD]\Documents\Autohotkey\Lib" ext="AHK" file="D:\[LD]\Documents\Autohotkey\Lib\DebugWindow.AHK" filename="DebugWindow.AHK" id="3" lang="ahk" lower="d:\[ld]\documents\autohotkey\lib\debugwindow.ahk" nne="DebugWindow" type="File" time="20180202182956" encoding="UTF-8">
+				<info att="Text,Clear:=0,LineBreak:=0,Sleep:=0,AutoHide:=0,MsgBox:=0" pos="1" text="DebugWindow" type="Function" upper="DEBUGWINDOW"></info></file>
+			<header type="Function"></header></main></Libraries>
+</cexml>

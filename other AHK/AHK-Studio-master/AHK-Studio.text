@@ -1,0 +1,11 @@
+1.005.06:
+Fixed:
+- Indent with the syntax "Function(){ ;Comment" was causing issues
+- History: Having duplicate entries for files
+Changed:
+- Menu Icons: If you have an icon for every Menu Item it takes about 2.5 seconds to load them all.  I changed it so that they load afterward.
+Fixed: Reported by Joe Glines
+- ; with a { at the end of a line was causing indents
+Fixed: Reported by tempuserr #156
+- Version Number not properly updated
+- Removed some old XML files and README.md file

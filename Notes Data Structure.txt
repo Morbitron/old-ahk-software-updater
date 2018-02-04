@@ -1,0 +1,44 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+	<person>
+		<name>Bob</name>
+		<job>Boss</job>
+	</person>
+	<book category="aventure" color="red">
+		<title language="english">Knight of the forest</title>
+	</book>
+</ROOT>
+
+
+
+
+
+{
+	"book": 
+}
+
+
+
+{
+  "ROOT": {
+    "person": {
+      "name": "Bob",
+      "job": "Boss"
+    },
+    "book": {
+      "-category": "aventure",
+      "-color": "red",
+      "title": {
+        "-language": "english",
+        "#text": "Knight of the forest"
+      }
+    }
+  }
+}
+
+
+
+
+

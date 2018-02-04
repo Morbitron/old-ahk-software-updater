@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="yes"?>
+<options version="410">
+	<!--group unity.Options-->
+	<!--group unity.General-->
+	<entryvalue ident="unity.AutoIncrementProjectVer" value="1"></entryvalue>
+	<entryvalue ident="unity.AutoCompletion" value="1"></entryvalue>
+	<entryvalue ident="unity.DisplayErrorMode" value="0"></entryvalue>
+	<entryvalue ident="unity.OpeninContextActive" value="1"></entryvalue>
+	<entryvalue ident="unity.DisplayModifiedSections" value="1"></entryvalue>
+</options>

@@ -1,0 +1,99 @@
+﻿<?xml version="1.0"?>
+<settings>
+	<Extensions>
+		<Extension language="ahk">ahk</Extension>
+		<Extension language="hypertext">html</Extension>
+		<Extension language="hypertext">htm</Extension>
+		<Extension language="json">json</Extension>
+		<Extension language="xml">xml</Extension>
+	</Extensions>
+	<theme>
+		<name>Zenburn_dark_with_maestrith</name>
+		<author>Run1e and maestrith</author>
+		<caret color="16777215" multi="0x00A5FF" lineback="4473924" width="1" debug="255"></caret>
+		<default background="3158064" color="16777215" font="Consolas" size="10" underline="0"></default>
+		<find>
+		</find>
+		<inlinecomment color="8363903" italic="1" size="10" underline="0"></inlinecomment>
+		<numbers color="8421616"></numbers>
+		<punctuation color="16777215"></punctuation>
+		<multilinecomment color="16744576" size="10" underline="0"></multilinecomment>
+		<completequote color="8816334"></completequote>
+		<incompletequote background="0" color="255"></incompletequote>
+		<backtick color="12110995"></backtick>
+		<linenumbers background="3158064" color="16777215" font="Consolas"></linenumbers>
+		<bracematch color="255"></bracematch>
+		<indentguide color="4227327"></indentguide>
+		<editedmarkers edited="0x0000FF" saved="0x00FF00"></editedmarkers>
+		<fold background="0xFFFFFF" color="0"></fold>
+		<projectexplorer>
+		</projectexplorer>
+		<codeexplorer>
+		</codeexplorer>
+		<selfore bool="0" code="2067" color="0"></selfore>
+		<selback bool="1" code="2068" color="32896"></selback>
+		<additionalselback code="2601" color="8421504"></additionalselback>
+		<keyword set="0" color="5741559"></keyword>
+		<keyword set="1" color="7843024"></keyword>
+		<keyword set="2" color="13617276"></keyword>
+		<keyword set="3" color="16758590"></keyword>
+		<keyword set="4" color="16759366"></keyword>
+		<keyword set="5" color="9749720"></keyword>
+		<keyword set="6" color="14732901"></keyword>
+		<keyword set="7" color="8241367"></keyword>
+		<keyword set="8" color="15458669"></keyword>
+	</theme>
+	<Languages>
+		<hypertext date="20180130100716" name="HTML">
+			<font color="7843024" style="2"></font>
+			<font color="13617276" fold="1" style="1"></font></hypertext>
+		<json date="20180130100716" name="JSON">
+			<font color="7843024" style="2"></font>
+			<font color="13617276" fold="1" style="1"></font></json>
+		<xml date="20180130100716" name="XML">
+			<font color="16758590" style="1"></font>
+			<font color="14732901" style="3"></font>
+			<font color="0x00FF00" style="11"></font>
+			<font color="0x00FF00" style="12"></font>
+			<font color="0x00FF00" style="13"></font></xml>
+		<ahk>
+			<font style="0" color="12632256"></font>
+			<font style="40" color="65408"></font>
+			<font style="41" color="16776960"></font>
+			<font style="42" color="0" background="255"></font>
+			<font style="55" color="4227327"></font>
+			<font style="56" color="8421440"></font>
+			<font style="57" color="16744576"></font>
+			<font style="58" color="8388863"></font>
+			<font style="59" color="12615935"></font>
+			<font style="60" color="11184895"></font>
+			<font style="61" color="4737279"></font>
+			<font style="96" color="8388863"></font>
+			<font style="97" color="8388863"></font>
+			<font style="99" color="8388863"></font>
+			<font style="100" color="8388863"></font>
+		</ahk>
+	</Languages>
+	<autoadd altgr="0">
+		<key add="&quot;" trigger="&quot;"></key>
+		<key add="'" trigger="'"></key>
+		<key add=")" trigger="("></key>
+		<key add="]" trigger="["></key>
+		<key add="}" trigger="{"></key></autoadd>
+	<options Manual_Continuation_Line="1" Full_Auto_Indentation="1" Focus_Studio_On_Debug_Breakpoint="1" Word_Wrap_Indicators="1" Context_Sensitive_Help="1" Auto_Complete="1" Auto_Complete_In_Quotes="1" Auto_Complete_While_Tips_Are_Visible="1"></options>
+	<autodelete>
+		<key close="&quot;" open="&quot;"></key>
+		<key close="%" open="%"></key>
+		<key close="'" open="'"></key>
+		<key close=")" open="("></key>
+		<key close="&gt;" open="&lt;"></key>
+		<key close="]" open="&lt;^&gt;["></key>
+		<key close="}" open="&lt;^&gt;{"></key>
+		<key close="]" open="["></key>
+		<key close="}" open="{"></key>
+	</autodelete>
+	<gui zoom="0">
+		<position window="1" max="0"></position></gui>
+	<open>
+	</open>
+</settings>
