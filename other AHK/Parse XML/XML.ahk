@@ -32,17 +32,19 @@ xmlcontents=
 <options version="410">
 	<!--group unity.Options-->
 	<!--group unity.General-->
-	<entryvalue ident="unity.AutoIncrementProjectVer" value="1"></entryvalue>
-	<entryvalue ident="unity.AutoCompletion" value="1"></entryvalue>
-	<entryvalue ident="unity.DisplayErrorMode" value="0"></entryvalue>
-	<entryvalue ident="unity.OpeninContextActive" value="1"></entryvalue>
-	<entryvalue ident="unity.DisplayModifiedSections" value="1"></entryvalue>
+	<entryvalue ident="unity.AutoIncrementProjectVer" value="1">WOOR</entryvalue>
+	<entryvalue ident="unity.AutoCompletion" value="1">bob</entryvalue>
+	<entryvalue ident="unity.DisplayErrorMode" value="0">margaret</entryvalue>
+	<entryvalue ident="unity.OpeninContextActive" value="1">plow</entryvalue>
+	<entryvalue ident="unity.DisplayModifiedSections" value="1">me</entryvalue>
 </options>
 )
 
 NewXML:=New XML("dick_cheese")
 ;NewXML.XML.LoadXML(xmlcontents)
-UnityPath:=NewXML.SSN("//*[@ident='unity.OpeninContextActive']/@value").text
+;UnityPath:=NewXML.SSN("//*[@ident='unity.OpeninContextActive']/@value").text
+UnityPath:=NewXML.SSN("//*[@ident='unity.OpeninContextActive']").text
+UnityPath:=NewXML.Find("entryvalue")
 MsgBox,%UnityPath%
 ;UnityPath:=NewXML.save
 ;MsgBox,%UnityPath%
